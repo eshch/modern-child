@@ -56,7 +56,7 @@ $pagination_suffix = wm_paginated_suffix( 'small', 'post' );
 					echo '<div style="background-color: black;">';
 				}
 
-				the_post_thumbnail( $image_size );
+				the_post_thumbnail( $image_size, array( 'style' => 'transform: translate3d(0px,0px,0px);' ) );
 
 				if ( ! empty( $image_link ) ) {
 					echo '</div>';
