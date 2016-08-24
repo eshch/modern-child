@@ -11,4 +11,10 @@ function my_theme_enqueue_styles() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
+function my_remove_single_image_link($image_link) {
+  return (is_single()) ? array() : $image_link;
+}
+add_filter('wmhook_entry_image_link', 'my_remove_single_image_link');
+
 ?>
