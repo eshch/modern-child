@@ -53,11 +53,13 @@ $pagination_suffix = wm_paginated_suffix( 'small', 'post' );
 
 				if ( ! empty( $image_link ) ) {
 					echo '<a href="' . esc_url( $image_link[0] ) . '" title="' . the_title_attribute( 'echo=0' ) . '">';
+					echo '<div style="background-color: black;">';
 				}
 
 				the_post_thumbnail( $image_size );
 
 				if ( ! empty( $image_link ) ) {
+					echo '</div>';
 					echo '</a>';
 				}
 
