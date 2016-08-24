@@ -81,6 +81,10 @@ $pagination_suffix = wm_paginated_suffix( 'small', 'post' );
 
 			wmhook_entry_top();
 
+		echo 	'<div class="entry-meta-element" itemprop="keywords">';
+		echo 		'<a href="http://lenincrew.com/tag/%d0%bd%d0%b8%d0%ba%d0%be%d0%bb%d0%b0%d0%b9-%d0%b1%d1%83%d1%85%d0%b0%d1%80%d0%b8%d0%bd/" rel="tag">Николай Бухарин</a>';
+		echo 	'</div>';
+
 			echo '<div class="entry-content"' . wm_schema_org( 'entry_body' ) . '>';
 
 				if (
