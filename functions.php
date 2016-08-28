@@ -17,4 +17,24 @@ function my_remove_single_image_link($image_link) {
 }
 add_filter('wmhook_entry_image_link', 'my_remove_single_image_link');
 
+function my_remove_meta($meta, $values) {
+	$meta['meta'] = array_diff($meta['meta'], $values);
+	return $meta;
+}
+
+function my_add_meta($meta, $values) {
+	$meta['meta'] = array_merge($meta['meta'], $values);
+	return $meta;
+}
+
+function my_filter_entry_top_meta($meta) {
+	return my_add_meta(my_remove_meta($meta, ['edit', 'author']), ['tags']);
+}
+
+function my_filter_entry_bottom_meta($meta) {
+	return my_remove_meta($meta, ['tags']);
+}
+
+add_filter('wmhook_wm_entry_top_meta', 'my_filter_entry_top_meta');
+add_filter('wmhook_wm_entry_bottom_meta', 'my_filter_entry_bottom_meta');
 ?>
