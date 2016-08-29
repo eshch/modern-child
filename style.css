@@ -28,6 +28,15 @@
 	content: '';
 }
 
-.posts .entry-title {
-	margin-bottom: 0;
+h1.entry-title[itemprop=name] {
+	font-size: 1.1em;
+}
+
+p.post-excerpt {
+	font-size: 0.8em;
+}
+
+.posts .entry-inner {
+	padding-right: 12%;
+	padding-left: 12%;
 }
