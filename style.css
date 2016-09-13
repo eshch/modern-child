@@ -40,3 +40,18 @@ p.post-excerpt {
 	padding-right: 12%;
 	padding-left: 12%;
 }
+
+.link-more a {
+	text-decoration: none;
+}
+
+.link-more a div {
+	text-align: center;
+	padding: 2px;
+	border: 2px solid black;
+}
+
+.link-more a div:hover {
+	color: white;
+	background-color: black;
+}
