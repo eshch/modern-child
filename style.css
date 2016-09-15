@@ -43,15 +43,13 @@ p.post-excerpt {
 
 .link-more a {
 	text-decoration: none;
-}
-
-.link-more a div {
+	display: block;
 	text-align: center;
 	padding: 2px;
 	border: 2px solid black;
 }
 
-.link-more a div:hover {
+.link-more a:hover {
 	color: white;
 	background-color: black;
 }
