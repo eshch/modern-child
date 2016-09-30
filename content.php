@@ -52,7 +52,7 @@ $pagination_suffix = wm_paginated_suffix( 'small', 'post' );
 				<?php
 
 				if ( ! empty( $image_link ) ) {
-					echo '<a href="' . esc_url( $image_link[0] ) . '" title="' . the_title_attribute( 'echo=0' ) . '">';
+					echo '<a href="' . esc_url( $image_link[0] ) . '" title="' . my_get_the_tag_list_title() . '">';
 					echo '<div style="background-color: black;">';
 				}
 

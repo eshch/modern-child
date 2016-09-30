@@ -52,6 +52,21 @@ function my_filter_the_tags($list, $before, $sep, $after, $id) {
 
 add_filter('the_tags', 'my_filter_the_tags');
 
-function get_authors() {
+function my_get_the_tag_list_title($id = 0) {
+	$tags = get_the_tags($id);
+
+	if ( is_wp_error( $tags ) )
+		return $tags;
+
+	if ( empty( $tags ) )
+		return false;
+
+	$tag_names = array();
+
+	foreach ( $tags as $tag ) {
+		$tag_names[] = $tag->name;
+	}
+
+	return join(', ', $tag_names);
 }
 ?>
