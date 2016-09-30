@@ -45,4 +45,13 @@ function my_filter_google_fonts_url($in_url) {
 }
 
 add_filter('wmhook_wm_google_fonts_url_output', 'my_filter_google_fonts_url');
+
+function my_filter_the_tags($list, $before, $sep, $after, $id) {
+	return get_the_term_list($id, 'post_tag', $before, ', ', $after);
+}
+
+add_filter('the_tags', 'my_filter_the_tags');
+
+function get_authors() {
+}
 ?>
