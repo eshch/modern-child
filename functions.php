@@ -38,12 +38,6 @@ function my_filter_entry_bottom_meta($meta) {
 add_filter('wmhook_wm_entry_top_meta', 'my_filter_entry_top_meta');
 add_filter('wmhook_wm_entry_bottom_meta', 'my_filter_entry_bottom_meta');
 
-function my_scripts() {
-	wp_enqueue_script('tooltip', get_stylesheet_directory_uri() . '/js/tooltip.js', array('jquery-ui-tooltip'));
-}
-
-add_action('wp_enqueue_scripts', 'my_scripts');
-
 define('MOZILLA_FIRA', '//code.cdn.mozilla.net/fonts/fira.css');
 
 function my_filter_google_fonts_url($in_url) {
