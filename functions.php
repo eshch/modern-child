@@ -69,4 +69,11 @@ function my_get_the_tag_list_title($id = 0) {
 
 	return join(', ', $tag_names);
 }
+
+function my_filter_credits_output($credits)
+{
+	return '';
+}
+
+add_filter('wmhook_wm_credits_output', my_filter_credits_output);
 ?>
