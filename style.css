@@ -53,3 +53,8 @@ p.post-excerpt {
 	color: white;
 	background-color: black;
 }
+
+.not-front-page .site-banner img {
+      -webkit-filter: blur(10px) grayscale(100%) contrast(66%);
+      filter: blur(10px) grayscale(100%) contrast(66%);
+}
