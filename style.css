@@ -58,3 +58,7 @@ p.post-excerpt {
       -webkit-filter: blur(10px) grayscale(100%) contrast(66%);
       filter: blur(10px) grayscale(100%) contrast(66%);
 }
+
+footer {
+	display: none;
+}
