@@ -75,5 +75,23 @@ function my_filter_credits_output($credits)
 	return '';
 }
 
-add_filter('wmhook_wm_credits_output', my_filter_credits_output);
+add_filter('wmhook_wm_credits_output', 'my_filter_credits_output');
+
+function my_filter_register_styles($orig) {
+	$new = $orig;
+	$new['my-colors'] = array(wm_get_stylesheet_directory_uri('css/my_colors.css'));
+	return $new;
+}
+
+add_filter('wmhook_wm_register_assets_register_styles', 'my_filter_register_styles');
+
+function my_filter_enqueue_styles($orig) {
+	$new = $orig;
+	if (!in_array('my-colors', $orig, true)) {
+		$new[] = 'my-colors';
+	}
+	return $new;
+}
+
+add_filter('wmhook_wm_enqueue_assets_enqueue_styles', 'my_filter_enqueue_styles');
 ?>
