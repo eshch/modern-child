@@ -69,4 +69,6 @@ footer {
 
 .menu-toggle {
 	position: absolute;
+	right: 0;
+	left: initial;
 }
